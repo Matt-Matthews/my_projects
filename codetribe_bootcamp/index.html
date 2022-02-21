@@ -28,9 +28,8 @@
         allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
         allowfullscreen></iframe>
 
-        <h1>Mathews Paku</h1>
-        <p>I`m a software developer from Burgersfort in Limpopo, South Africa. <br>
-            I design and develop mobile apps and websites. <a class="more" href="about.html">more info...</a></p>
+        <h1 id="head"></h1>
+        <p id="bio"></p>
         <a class="btn" href="https://drive.google.com/file/d/1hnHK3wNZba5ruir3UZGqOE2V9N8k2wub/view?usp=drivesdk">Download cv</a>
         <img src="assets\image.png" class="image">
         
@@ -45,7 +44,17 @@
         <a href="#">0607509979</a>
     </div>
     </footer>
-    
+
+    <script>
+        const name = 'Mathews';
+        const surname = 'Paku';
+        const education = 'Graduated from Tshwane University of technology with a National Deploma in Information Technology - Development Software.';
+        let bio = 'I`m a software developer from Burgersfort in Limpopo,South Africa.'+ "<br>" + education +' I mainly focus on developing Mobile Apps and Websites.';
+
+        document.getElementById('head').innerHTML = 'I`m '+ name+' '+surname;
+        document.getElementById('bio').innerHTML = bio;
+    </script>
+
     <style>
         nav{
             
@@ -74,6 +83,10 @@
             color: lime;
             font-weight: bold;
         }
+        .selected:hover{
+            color: lime;
+            font-weight: bold;
+        }
         main h1{
             color: white;
             font-weight: bold;
@@ -84,6 +97,7 @@
             color: white;
             font-family: sans-serif;
             letter-spacing: 1px;
+            width: 40%;
         }
         .more{
             color: lime;

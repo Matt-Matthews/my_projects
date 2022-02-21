@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+<script src="script.js"></script>
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -22,17 +23,35 @@
 
     <main>
         <div class="flayout">
-        <form action="#">                      
-            <label for="Fname">Firstname</label><br>
-            <input type="text" placeholder="Firstname"><br>
-            <label for="Lname">Last name</label><br>
-            <input type="text" placeholder="Lastname"><br>
-            <label for="Email">Email address</label><br>
-            <input type="text" placeholder="Email address"><br>
-            <label for="Msg">Message</label><br>
-            <textarea name="Message" id="Message" placeholder="Message" cols="30" rows="10"></textarea><br>
-            <div class="btn"><button type="button" value="send">Send</button></div>
-        </form></div>
+            <form
+            action="https://formspree.io/f/xnqwdvbl"
+            method="POST"
+          >
+          <label>
+            Name(s):
+            <input type="text" name="name(s)">
+          </label>
+          <label>
+            Surname:
+            <input type="text" name="surname">
+          </label>
+            <label>
+              Email:
+              <input type="email" name="email">
+            </label>
+            <label>
+              Message:
+              <textarea name="message"></textarea>
+            </label>
+            <!-- your other form fields go here -->
+            <button type="submit" id="sentBtn">Send</button>
+          </form></div>
+          
+          
+              
+                  <iframe 
+                  src="https://maps.google.com/maps?q=tut%20polokwane&t=&z=13&ie=UTF8&iwloc=&output=embed">
+                  </iframe>
     </main>
 
     <footer>
@@ -44,17 +63,20 @@
         <a href="#">0607509979</a>
     </div>
     </footer>
-    
+   
     <style>                             
         main{
             margin-top: 5%;
             width: 100%;
-            align-content: center;
-            display: flex;
+            height: 70%;
+            display: inline-flex;
             justify-content: space-around;
         }
+        iframe{
+            width: 30%;
+        }
         .flayout{
-            width: 25%;
+            width: 20%;
             align-content: center;
             justify-content: space-around;
             display: flex;
@@ -81,11 +103,11 @@
             border: 1px solid lime;
             border-radius: 25px;
             width: 100px;
-            background-color: #041C32;
+            background-color: lime;
             height: 20px;
         }
         form button:hover{
-            background-color: lime;
+            background-color: #041C32;
         }
         form textarea{
             border-radius: 7px;
@@ -125,8 +147,10 @@
             color: lime;
             font-weight: bold;
         }
-       
-        
+        .selected:hover{
+            color: lime;
+            font-weight: bold;
+        }
         footer{
             margin-top: 5%;
             width: 100%;

@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+   
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -21,15 +22,8 @@
     </header>
 
     <main>
-        <h3>I`m Mathews Paku</h3>
-        <p>I`m a software developer from Burgersfort in Limpopo, South Africa. 
-            Graduated from Tshwane University of technology with a National Deploma in 
-            Information Technology - Development Software. I mainly focus on 
-            developing Mobile Apps and Websites. I`m a passionate, earger to learn and a hardworking individual, 
-            and i love and enjoy developing Mobile Apps and Websides. In additionally, i also do graphics design,
-             such as UI/UX design, Web page design, Poster, Logo, Business card and banner. <br>
-             <br>I develob Android and Ios apps using Flutter and Dart. And develop websites by Html, Css and Java Script. 
-             I also know C++ and MySql. And i am an experience computer technician.
+        <h3 id="head"></h3>
+        <p id="bio">
         </p>
         <a href="https://drive.google.com/file/d/1hnHK3wNZba5ruir3UZGqOE2V9N8k2wub/view?usp=drivesdk">
             Download cv</a>
@@ -45,6 +39,19 @@
         <a href="#">0607509979</a>
     </div>
     </footer>
+    
+    <script>
+        const name = 'Mathews';
+        const surname = 'Paku';
+        const education = 'Graduated from Tshwane University of technology with a National Deploma in Information Technology - Development Software.';
+        let bio = 'I`m a software developer from Burgersfort in Limpopo,South Africa.'+ "<br>" + education +' I mainly focus on developing Mobile Apps and Websites.';
+        const secBio = 'I`m a passionate, earger to learn and a hardworking individual, and i love and enjoy developing Mobile Apps and Websides.'+ "<br>" +'In additionally, i also do graphics design,such as UI/UX design, Web page design, Poster, Logo, Business card and banner.'+ "<br>" +'I develob Android and Ios apps using Flutter and Dart. And develop websites by Html, Css and Java Script. I also know C++ and MySql. And i am an experience computer technician.';
+        const email = 'mathewspaku@gmail.com';
+        const contact_no = '0607509979';
+
+        document.getElementById('head').innerHTML = 'I`m '+ name+' '+surname;
+        document.getElementById('bio').innerHTML = bio + "<br>" + "<br>" + secBio;
+    </script>
     
     <style>
         main{
@@ -81,6 +88,10 @@
             color: #95d1cc;
         }
         .selected{
+            color: lime;
+            font-weight: bold;
+        }
+        .selected:hover{
             color: lime;
             font-weight: bold;
         }
@@ -121,7 +132,7 @@
             transform: bottom 1s, left 1s;
         }
         footer{
-            margin-top: 5%;
+            margin-top: 1%;
             width: 100%;
             height: 100px;
             background-color: black;
